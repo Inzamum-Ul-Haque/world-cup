@@ -8,8 +8,14 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 90%;
   margin: 20px auto;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #4ded30;
+  color: white;
 }
 /* common styles */
 
@@ -75,6 +81,7 @@ body {
 }
 
 .btn-section button {
+  border: 1px solid gray;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -84,8 +91,16 @@ body {
   height: 64px;
 }
 
+.btn-section button a {
+  text-decoration: none;
+  color: black;
+}
+
 .btn-section button:last-child {
   background-color: #4ded30;
+}
+
+.btn-section button:last-child a {
   color: white;
 }
 
@@ -135,6 +150,60 @@ body {
   margin-right: 10px;
 }
 /* blog styles end */
+/* match styles start*/
+.matches {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 24px;
+}
+
+.match {
+  border: 1px solid gray;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.match-flags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.match-flags img {
+  margin: 10px;
+  width: 80px;
+  height: 57px;
+}
+
+.match p {
+  text-align: center;
+}
+
+.match-against {
+  font-size: 20px;
+  font-weight: 600;
+}
+/* match styles end */
+
+/* view button styles */
+.view-btn {
+  margin: 40px 0 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.view-btn button {
+  width: 130px;
+  height: 47px;
+  display: none;
+  border: 1px solid gray;
+  color: white;
+  background-color: #4ded30;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+}
 
 /* footer styles start */
 footer {
@@ -165,10 +234,137 @@ footer .links {
 }
 
 footer .links a {
+  margin: 10px 0 10px 0;
   text-decoration: none;
   margin-right: 50px;
   font-size: 16px;
   color: #b9b9b9;
   font-weight: 500;
 }
+
+footer .social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .social-links a {
+  margin: 40px;
+  color: white;
+}
 /* footer styles end */
+
+/* media queries for tablet*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .header-title {
+    font-size: 40px;
+  }
+
+  .header-texts p {
+    font-size: 14px;
+  }
+
+  .header-image img {
+    width: 323px;
+  }
+
+  .blog-details {
+    margin-top: 60px;
+    flex-direction: column;
+  }
+
+  .btn-section {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 40px 0;
+    padding: 0;
+  }
+
+  .btn-section button {
+    width: 230px;
+  }
+
+  .blogs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .view-btn button {
+    display: block;
+  }
+}
+
+/* media queries for mobile */
+@media only screen and (max-width: 767px) {
+  .header-content {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .header-title {
+    font-size: 23px;
+  }
+
+  .header-texts {
+    text-align: center;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-texts p {
+    height: 150px;
+    text-overflow: ellipsis;
+  }
+
+  .header-image img {
+    margin-top: 290px;
+    width: 233px;
+  }
+
+  .blog-details {
+    margin-top: 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-section {
+    width: 80%;
+    height: auto;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 40px 0;
+    padding: 20px;
+  }
+
+  .btn-section button {
+    width: auto;
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 0 25px 0 25px;
+  }
+
+  .blogs {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  footer .links {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer .links a {
+    margin: 15px 0 15px 0;
+  }
+}
