@@ -78,7 +78,7 @@ button:hover {
 
 .header-title {
   font-size: 70px;
-  animation: title-animate 5s ease-in 0.5s 1 reverse;
+  animation: title-animate 5s ease-in-out 0.5s 1 reverse;
 }
 
 .header-texts p {
